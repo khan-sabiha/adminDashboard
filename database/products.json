@@ -1,0 +1,11 @@
+[
+    {"p_name":"Chocolate Donuts" , "p_descript" : "Regular chocolate glazed Donut", "categories": "Donuts" , "price": "5.00", "quantity": "200"},
+    {"p_name":"Glazed Donuts" , "p_descript" : "Regular sugar glazed donuts", "categories": "Donuts" , "price": "5.00", "quantity": "200"},
+    {"p_name":"Baby Donuts" , "p_descript" : "different flavours and glazed donuts", "categories": "Baby Donuts" , "price": "3.00", "quantity": "150"},
+    {"p_name":"Coffee" , "p_descript" : "Regular black coffee with creame", "categories": "Drinks" , "price": "2.50", "quantity": "300"},
+    {"p_name":"Cappuccino" , "p_descript" : "french vanilaa flavour cappuccino", "categories": "Drinks" , "price": "10.00", "quantity": "100"},
+    {"p_name":"Big sized Donuts" , "p_descript" : "Differend shaped donuts with different glaze either sugar or chocolate", "categories": "Donuts" , "price": "7.00", "quantity": "150"},
+    {"p_name":"Eid Specials" , "p_descript" : "special donuts for eid and limited editio", "categories": "Specials" , "price": "8.00", "quantity": "300"},
+    {"p_name":"National Day Speial " , "p_descript" : "Green and white colored donuts for independence day", "categories": "Specials" , "price": "6.00", "quantity": "400"},
+    {"p_name":"Offers" , "p_descript" : "Special offeres for regular donuts in the shop", "categories": "Donuts" , "price": "3.50", "quantity": "200"}
+]
