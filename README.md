@@ -10,7 +10,7 @@
 
 ## Overview
 
-This Laravel project is built using the [AdminLTE](https://adminlte.io/) template and integrates [Bootstrap](https://getbootstrap.com/). It provides a foundation for developing web applications with a responsive and feature-rich admin dashboard. 
+This Laravel project is built using the [AdminLTE](https://adminlte.io/) template and integrates [Bootstrap](https://getbootstrap.com/). It provides a foundation for developing web applications with a responsive and admin dashboard. 
 
 
 ## Features
@@ -65,21 +65,12 @@ Follow these steps to set up and run the project locally:
     php artisan serve
 
 ### Usage
-- It takes the user to the admin dashboard by after logging in.
+- It takes the user to the admin dashboard after logging in.
 - Customize and extend the project to fit your needs.
 - Refer to the AdminLTE documentation and Bootstrap documentation for customization options and     additional features.
 
 ### Contributing
 Feel free to contribute to this project by opening issues or submitting pull requests.
-
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
