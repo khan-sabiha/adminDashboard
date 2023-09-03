@@ -35,32 +35,32 @@ Follow these steps to set up and run the project locally:
 
  1. Clone the repository:
 
-   git clone https://github.com/yourusername/your-project.git
-   cd your-project
+    git clone https://github.com/yourusername/your-project.git
+    cd your-project
 
-2. Install PHP dependancies:
+3. Install PHP dependancies:
 
     composer install
 
-3. Install Javascript dependencies:
+4. Install Javascript dependencies:
 
     npm install
 
- 4. Create a copy of the .env.example file and rename it to .env. Configure your database connection settings in this file.
+ 5. Create a copy of the .env.example file and rename it to .env. Configure your database connection settings in this file.
 
-5. Generate an application key:
+6. Generate an application key:
 
     php artisan key:generate
 
-6. Migrate the database:
+7. Migrate the database:
 
     php artisan migrate
 
-7. Run the database seeder:
+8. Run the database seeder:
 
     php artisan db:seed
 
-8. Start the server:
+9. Start the server:
 
     php artisan serve
 
