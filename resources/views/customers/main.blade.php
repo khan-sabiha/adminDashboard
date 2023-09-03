@@ -4,37 +4,38 @@
 
 @section('customers')
 <div style="text-align:right; padding: 20px;">
-    <a class="btn btn-primary" style="background-color:#E22C87;" href="{{url('/customers/createCustomers')}}"> Add
-        Customers</i></a>
+    <a class="btn btn-primary" style="background-color:#E22C87;" href="{{ url('/customers/createCustomers') }}"> Add
+        Customers</a>
 </div>
 
-
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-    @foreach($customers as $customer)
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        
+        @foreach($customers as $customer)
+        <div class="col-md-3 mb-4">
             <div class="our-team">
                 <div class="picture">
-                    <img class="img-fluid" src="{{asset('../assets/img/profile.png')}}">
+                    <img class="img-fluid" src="{{ asset('../assets/img/profile.png') }}">
                 </div>
                 <div class="team-content">
-                    <h5 class="name">{{$customer->name}}</h3>
-                    <p class="email">{{$customer->email}}</p>
-                    <p class="email">{{$customer->phone}}</p>
+                    <h5 class="name">{{ $customer->name }}</h5>
+                    <p class="email">{{ $customer->email }}</p>
+                    <p class="email">{{ $customer->phone }}</p>
                 </div>
                 <ul class="social">
-                    <li><a href="{{url('customers/editCustomers/'. $customer->id)}}" class="small-box-footer"><i class="fas fa-edit"></i></a>
-                    </li>
-                    <li><a class="small-box-footer" href="{{url('customers/main/delete/'. $customer->id)}}"> <i class="fas fa-trash"></i></a></li>
+                    <li><a href="{{ url('customers/editCustomers/'. $customer->id) }}" class="small-box-footer"><i
+                                class="fas fa-edit"></i></a></li>
+                    <li><a class="small-box-footer" href="{{ url('customers/main/delete/'. $customer->id) }}"><i
+                                class="fas fa-trash"></i></a></li>
                 </ul>
             </div>
-        </div>   
-     @endforeach    
-     <div >
-        {{$customers->links("pagination::bootstrap-4")}}
-     </div>
-     
+        </div>
+        @endforeach
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            {{ $customers->links("pagination::bootstrap-4") }}
+        </div>
     </div>
 </div>
 

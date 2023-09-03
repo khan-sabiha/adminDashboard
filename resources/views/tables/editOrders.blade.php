@@ -3,7 +3,7 @@
 
 @section('table')
 <div class="container-fluid">
-    <div class="row">
+    <div class="row justify-content-center">
         <!-- left column -->
         <div class="col-md-6">
             <!-- general form elements -->
@@ -25,7 +25,8 @@
                         <div class="form-group">
                             <label for="number">Customer Number</label>
                             <input type="tel" class="form-control" id="number" placeholder="Enter Number/+966"
-                                name="number" value="{{$orders->customer_number}}" pattern="^(\+9665)(5|0|3|6|4|9|1)([0-9]{7})$">
+                                name="number" value="{{$orders->customer_number}}"
+                                pattern="^(\+9665)(5|0|3|6|4|9|1)([0-9]{7})$">
                         </div>
                         <div class="form-group">
                             <label for="pickup">Pickup Location</label>
@@ -50,7 +51,7 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <button type="submit" style="background-color:#E22C87;"class="btn btn-primary">Submit</button>
+                        <button type="submit" style="background-color:#E22C87;" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
@@ -59,16 +60,16 @@
 </div>
 @endsection
 <script>
-$(function(){
-    $('#products').change(function(){
+$(function() {
+    $('#products').change(function() {
         var op = $(this).find("option:selected").text();
         var id = $(this).val();
         console.log(id);
         $('#products_id').replaceWith(
-                '<input type="hidden" class="form-control" id="products_id" name="products_id" value="' +
-                id + '">'
-            );
-        
+            '<input type="hidden" class="form-control" id="products_id" name="products_id" value="' +
+            id + '">'
+        );
+
 
     });
 });

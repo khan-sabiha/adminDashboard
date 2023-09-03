@@ -3,13 +3,13 @@
 @section('customers')
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row justify-content-center">
         <!-- left column -->
         <div class="col-md-6">
             <!-- general form elements -->
             <div class="card card-primary">
-                <div class="card-header"style="background-color:#E22C87;">
-                    <h3 class="card-title" >Add Customer</h3>
+                <div class="card-header" style="background-color:#E22C87;">
+                    <h3 class="card-title">Add Customer</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -21,9 +21,10 @@
                             <label for="name">Customer Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name">
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <label for="phone">Customer Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="+966" name="phone"  pattern="^(\+9665)(5|0|3|6|4|9|1)([0-9]{7})$">
+                            <input type="tel" class="form-control" id="phone" placeholder="+966" name="phone"
+                                pattern="^(\+9665)(5|0|3|6|4|9|1)([0-9]{7})$">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -31,13 +32,14 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-                        </div>                       
+                            <input type="password" class="form-control" id="password" placeholder="Enter password"
+                                name="password">
+                        </div>
                     </div>
                     <!-- /.card-body -->
 
-                    <div class="card-footer" >
-                        <button style="background-color:#E22C87;"type="submit" class="btn btn-primary">Submit</button>
+                    <div class="card-footer">
+                        <button style="background-color:#E22C87;" type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>

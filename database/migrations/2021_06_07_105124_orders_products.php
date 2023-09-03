@@ -16,9 +16,9 @@ class OrdersProducts extends Migration
         Schema::create('orders_products', function(Blueprint $table){
             $table->increments('id');
             $table->integer('orders_id')->unsigned()->nullable();
-            $table->foreign('orders_id')->references('id')->on('orders');
+            $table->foreign('orders_id')->references('id')->on('orders')->onDelete('cascade');;
             $table->integer('products_id')->unsigned()->nullable();
-            $table->foreign('products_id')->references('id')->on('products');
+            $table->foreign('products_id')->references('id')->on('products')->onDelete('cascade');;
             $table->integer('quantity')->unsigned();
             $table->string('total');
             $table->string('status')->nullable()->default('Pending');
