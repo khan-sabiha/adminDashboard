@@ -64,8 +64,6 @@ Follow these steps to set up and run the project locally:
 
     php artisan serve
 
-Your Laravel application should now be accessible at http://localhost:8000.
-
 ### Usage
 - It takes the user to the admin dashboard by after logging in.
 - Customize and extend the project to fit your needs.
