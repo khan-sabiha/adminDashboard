@@ -1,17 +1,13 @@
 @extends('admin.adminpage')
 
-
 @section('products')
-<div class="container-fluid"  >
-    <div class="row">
-        <!-- left column -->
-        <div class="col-md-6" >
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
             <div class="card card-primary">
                 <div class="card-header" style="background-color:#E22C87;">
                     <h3 class="card-title">Add Product</h3>
                 </div>
-                <!-- /.card-header -->
-                <!-- form start -->
                 <style>
                 .file-upload {
                     background-color: #ffffff;
@@ -29,7 +25,7 @@
                     transition: all .2s ease;
                     outline: none;
                     text-transform: uppercase;
-                   
+
                 }
 
                 .file-upload-btn:hover {
@@ -122,20 +118,22 @@
                     transition: all .2s ease;
                 }
                 </style>
-
-                <form method="post" action="/products/createProducts" enctype="multipart/form-data">
+                <form method="post" action="{{ url('/products/createProducts') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
+                        <!-- Product Name Input -->
                         <div class="form-group">
-                            <label for="pname"> Product Name</label>
+                            <label for="pname">Product Name</label>
                             <input type="text" class="form-control" id="pname" placeholder="Enter Product Name"
                                 name="pname">
                         </div>
-                        <div class="file-upload">
-                            <label for="img"> Product Image</label>
+
+                        <!-- Product Image Input -->
+                        <div class="form-group file-upload">
+                            <label for="img">Product Image</label>
                             <div class="image-upload-wrap">
-                                <input class="file-upload-input" type='file' onchange="readURL(this);"
-                                    accept="image/*" id ="img" name="img"/>
+                                <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*"
+                                    id="img" name="img" />
                                 <div class="drag-text">
                                     <h3>Drag and drop a file or select add Image</h3>
                                 </div>
@@ -149,34 +147,42 @@
                             </div>
                             <br>
                             <button class="file-upload-btn" type="button"
-                                onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+                                onclick="$('.file-upload-input').trigger('click')">Add Image</button>
                         </div>
+
+                        <!-- Product Description Textarea -->
                         <div class="form-group">
-                            <label for="description"> Product Description</label>
-                            <textarea type="text" class="form-control" id="description" placeholder="Enter Product Description"
-                                name="description" rows="3"></textarea>
+                            <label for="description">Product Description</label>
+                            <textarea type="text" class="form-control" id="description"
+                                placeholder="Enter Product Description" name="description" rows="3"></textarea>
                         </div>
+
+                        <!-- Categories Dropdown -->
                         <div class="form-group">
                             <label for="categories">Categories</label>
                             <select class="form-control" id="categories" name="categories">
-                                <option> Baby Donuts</option>
-                                <option> Donuts </option>
-                                <option> Specials </option>
-                                <option> Drinks </option>
+                                <option>Baby Donuts</option>
+                                <option>Donuts</option>
+                                <option>Specials</option>
+                                <option>Drinks</option>
                             </select>
                         </div>
+
+                        <!-- Price Input -->
                         <div class="form-group">
                             <label for="price">Price</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">SAR</span>
                                 </div>
-                                <input  class="form-control" value="0.00" data-decimal="2" min="0"
-                                    step="0.1" type="number" id="price" name="price">
+                                <input class="form-control" value="0.00" data-decimal="2" min="0" step="0.1"
+                                    type="number" id="price" name="price">
                             </div>
                         </div>
+
+                        <!-- Product Quantity Input -->
                         <div class="form-group">
-                            <label for="quantity">Product Quantity </label>
+                            <label for="quantity">Product Quantity</label>
                             <div class="input-group">
                                 <span class="input-group-prepend">
                                     <button type="button" class="btn btn-default btn-number" disabled="disabled"
@@ -184,8 +190,7 @@
                                         <i class="fa fa-minus"></i>
                                     </button>
                                 </span>
-                                <input type="text" name="quantity" class="form-control input-number" value="1" min="1"
-                                    >
+                                <input type="text" name="quantity" class="form-control input-number" value="1" min="1">
                                 <span class="input-group-append">
                                     <button type="button" class="btn btn-default btn-number" data-type="plus"
                                         data-field="quantity">
@@ -195,7 +200,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /.card-body -->
                     <div class="card-footer">
                         <button style="background-color:#E22C87;" type="submit" class="btn btn-primary">Submit</button>
                     </div>
@@ -204,14 +208,11 @@
         </div>
     </div>
 </div>
-@endsection
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
 </script>
-
 <script>
 function readURL(input) {
     if (input.files && input.files[0]) {
@@ -312,5 +313,5 @@ $(function() {
     });
 
 });
-
 </script>
+@endsection

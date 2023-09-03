@@ -2,7 +2,7 @@
 
 @section('table')
 <div class="container-fluid">
-    <div class="row">
+    <div class="row justify-content-center">
         <!-- left column -->
         <div class="col-md-6">
             <!-- general form elements -->
@@ -134,15 +134,15 @@ $(function() {
             );
         }
     });
-    $('#products').change(function(){
+    $('#products').change(function() {
         var op = $(this).find("option:selected").text();
         var id = $(this).val();
         console.log(id);
         $('#products_id').replaceWith(
-                '<input type="hidden" class="form-control" id="products_id" name="products_id" value="' +
-                id + '">'
-            );
-        
+            '<input type="hidden" class="form-control" id="products_id" name="products_id" value="' +
+            id + '">'
+        );
+
 
     });
 });

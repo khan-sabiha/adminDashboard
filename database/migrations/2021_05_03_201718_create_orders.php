@@ -17,7 +17,7 @@ class CreateOrders extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->bigInteger('customers_id')->unsigned()->nullable();
-            $table->foreign('customers_id')->references('id')->on('customers');
+            $table->foreign('customers_id')->references('id')->on('customers')->onDelete('cascade');;
             $table->string('customer_name');
             $table->string('customer_number');
             $table->string('pickup_location');

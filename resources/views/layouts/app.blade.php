@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Dashboard') }}</title>
 
 
     <!-- Fonts -->
@@ -57,10 +57,10 @@ body {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav" style="height: 10vh; width: 100%; text-align:centre;">
-                        <img src="{{asset('../assets/img/logo-B.jpg')}}" alt="AdminLTE Logo"
+                        <img src="{{asset('../assets/img/logo.jpg')}}" alt="AdminLTE Logo"
                             class="brand-image img-circle elevation-3" style="opacity: .8">
                         <div class="card-header text-center">
-                            <a href="{{ url('/') }}" class="h1">HOUSE OF DONUTS</a>
+                            <a href="{{ url('/') }}" class="h1">Brand Name</a>
                         </div>
                     </ul>
 
@@ -106,13 +106,13 @@ body {
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
-                        <div class="card w-50 p-3">
-                                @yield('content')
-                        </div>
+                    <div class="card w-50 p-3">
+                        @yield('content')
                     </div>
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 
     <!-- jQuery -->

@@ -7,11 +7,10 @@
 
 
 @section('table')
-<div class="container-fluid justify-content-center">
-    <div class="row ">
+<div class="container-fluid ">
+    <div class="row justify-content-center">
         <div class="col-10">
-            <div style="background-color:#F4D1E4;" class="d-flex justify-content-center align-items-center"
-                id="order-heading">
+            <div style="background-color:#F4D1E4;" class="d-flex justify-content-center" id="order-heading">
                 <div class="card-header">
                     <h3 class="title">ORDER DETAILS</h3>
                 </div>
